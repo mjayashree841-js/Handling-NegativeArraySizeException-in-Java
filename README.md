@@ -132,6 +132,44 @@ Priya
 
 Kabir
 Program execution completed.
+classDiagram
+    class GuestListException {
+        +main(args: String[]) void
+    }
+
+    class Scanner {
+        +nextInt() int
+        +next() String
+        +close() void
+    }
+
+    class NegativeArraySizeException
+    class RuntimeException
+
+    RuntimeException <|-- NegativeArraySizeException
+    GuestListException --> Scanner : uses
+    GuestListException --> NegativeArraySizeException : catches
+
+active diagrams:
+
+flowchart TD
+    A([START]) --> B[Create Scanner]
+    B --> C[Enter number of guests]
+    C --> D[Read size]
+    D --> E[Create guestList array]
+    E --> F{Is size < 0?}
+
+    F -->|Yes| G[Catch NegativeArraySizeException]
+    G --> H[Display error message]
+
+    F -->|No| I[Array created successfully]
+    I --> J[Enter guest names]
+    J --> K[Display guest list]
+
+    H --> L[finally: Close Scanner]
+    K --> L
+    L --> M[Program execution completed]
+    M --> N([END])
 
 
 6. Reference
