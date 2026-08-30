@@ -79,17 +79,24 @@ public class GuestListException {
  for (String guest : guestList) {
  System.out.println(guest);
  }
- } catch (NegativeArraySizeException e) {
+ } 
+
+catch (NegativeArraySizeException e) {
  System.out.println("Error: Cannot create guest-list array"+ "Array size cannot be negative.");
  System.out.println("Exception message: " + e.getMessage());
- } catch (Exception e) {
+ } 
+
+catch (Exception e) {
  System.out.println("An unexpected error occurred: " + e);
- } finally {
+ } 
+
+finally {
  sc.close();
  System.out.println("Program execution completed.");
  }
  }
 }
+
 5. Output
 
 Test Case 1: Negative size entered
