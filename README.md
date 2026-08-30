@@ -66,7 +66,7 @@ public class GuestListException {
 
  String[] guestList = new String[size];
  System.out.println("Guest-list array
- created successfully "+ "with size: " + size);
+ created successfully "+"with size: " + size);
 
  for (int i = 0; i < guestList.length; i++) {
  System.out.print("Enter name of guest " + (i + 1) + ": ");
@@ -80,7 +80,7 @@ public class GuestListException {
  System.out.println(guest);
  }
  } catch (NegativeArraySizeException e) {
- System.out.println("Error: Cannot create guest-list array. "+ "Array size cannot be negative.");
+ System.out.println("Error: Cannot create guest-list array"+ "Array size cannot be negative.");
  System.out.println("Exception message: " + e.getMessage());
  } catch (Exception e) {
  System.out.println("An unexpected error occurred: " + e);
