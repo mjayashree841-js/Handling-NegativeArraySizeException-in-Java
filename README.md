@@ -1,4 +1,5 @@
-Objective
+Objective:
+
 To design and implement a Java program that creates a guest-list array based on user-supplied size,
 and to gracefully handle the situation where the user enters a negative number for the array size. In
 Java, attempting to create an array with a negative size throws a runtime exception called
@@ -7,6 +8,7 @@ exception-handling constructs, display a meaningful error message to the user in
 program crash abruptly, and ensure the program terminates gracefully.
 
 2. Concepts Used
+
 • Exception Handling: Using try, catch and finally blocks to handle runtime errors.
 • NegativeArraySizeException: An unchecked exception (subclass of RuntimeException)
 thrown by the JVM when an array is created with a negative size.
@@ -18,6 +20,7 @@ Exception, to give precise error messages.
 executes, regardless of whether an exception occurred.
 
 3. Algorithm
+
 Step 1: Start the program and create a Scanner object to read input from the console.
 Step 2: Prompt the user to enter the number of guests (the size of the guest-list array).
 Step 3: Read the integer value entered by the user and store it in a variable 'size'.
@@ -35,6 +38,7 @@ that this always executes whether or not an exception occurred.
 Step 10: End the program.
 
 4. Java Code
+
 import java.util.Scanner;
 public class GuestListException {
  public static void main(String[] args) {
@@ -67,6 +71,7 @@ public class GuestListException {
  }
 }
 5. Output
+
 Test Case 1: Negative size entered
 Enter number of guests: -5
 Error: Cannot create guest-list array. Array size cannot be negative.
@@ -85,6 +90,7 @@ Kabir
 Program execution completed.
 
 6. Reference
+
  Oracle Java Documentation – NegativeArraySizeException,
 docs.oracle.com/javase/8/docs/api/java/lang/NegativeArraySizeException.html
 • Oracle Java Tutorials – 'Exceptions', The Java Tutorials,
