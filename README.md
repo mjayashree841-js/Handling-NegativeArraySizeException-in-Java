@@ -12,9 +12,13 @@ program crash abruptly, and ensure the program terminates gracefully.
 • Exception Handling: Using try, catch and finally blocks to handle runtime errors.
 
 • NegativeArraySizeException: An unchecked exception (subclass of RuntimeException)thrown by the JVM when an array is created with a negative size.
+
 • Arrays in Java: Declaration and dynamic creation of arrays using the 'new' keyword.
+
 • Scanner Class: Used to read user input from the console (java.util.Scanner).
+
 • Multi-catch / Specific catch blocks: Catching a specific exception type before a generic Exception, to give precise error messages.
+
 • finally Block: Used to release resources (closing the Scanner) and ensure certain code always
 executes, regardless of whether an exception occurred.
 
@@ -49,20 +53,30 @@ Step 10: End the program.
 
 import java.util.Scanner;
 public class GuestListException {
- public static void main(String[] args) {
+
+ public static void main(String[] args)
+ {
  Scanner sc = new Scanner(System.in);
+
  try {
  System.out.print("Enter number of guests: ");
+
  int size = sc.nextInt();
  // May throw NegativeArraySizeException if size < 0
+
  String[] guestList = new String[size];
- System.out.println("Guest-list array created successfully "
+ System.out.println("Guest-list array
+ created successfully "
  + "with size: " + size);
+
  for (int i = 0; i < guestList.length; i++) {
  System.out.print("Enter name of guest " + (i + 1) + ": ");
+
  guestList[i] = sc.next();
  }
+
  System.out.println("\n--- Guest List ---");
+
  for (String guest : guestList) {
  System.out.println(guest);
  }
@@ -81,21 +95,39 @@ public class GuestListException {
 5. Output
 
 Test Case 1: Negative size entered
+
 Enter number of guests: -5
-Error: Cannot create guest-list array. Array size cannot be negative.
+
+Error: Cannot create guest-list array.
+ Array size cannot be negative.
+
 Exception message: -5
+
 Program execution completed.
-Test Case 2: Valid (positive) size entered
+
+Test Case 2: Valid (positive) size
+ entered
+
 Enter number of guests: 3
-Guest-list array created successfully with size: 3
+
+Guest-list array created successfully
+ with size: 3
+
 Enter name of guest 1: Arjun
+
 Enter name of guest 2: Priya
+
 Enter name of guest 3: Kabir
+
 --- Guest List ---
+
 Arjun
+
 Priya
+
 Kabir
 Program execution completed.
+
 
 6. Reference
 
