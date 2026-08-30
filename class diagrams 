@@ -1,0 +1,17 @@
+classDiagram
+    class GuestListException {
+        +main(args: String[]) void
+    }
+
+    class Scanner {
+        +nextInt() int
+        +next() String
+        +close() void
+    }
+
+    class NegativeArraySizeException
+    class RuntimeException
+
+    RuntimeException <|-- NegativeArraySizeException
+    GuestListException --> Scanner : uses
+    GuestListException --> NegativeArraySizeException : catches
