@@ -5,6 +5,7 @@ Java, attempting to create an array with a negative size throws a runtime except
 NegativeArraySizeException. The objective of this program is to catch this exception using proper
 exception-handling constructs, display a meaningful error message to the user instead of letting the
 program crash abruptly, and ensure the program terminates gracefully.
+
 2. Concepts Used
 • Exception Handling: Using try, catch and finally blocks to handle runtime errors.
 • NegativeArraySizeException: An unchecked exception (subclass of RuntimeException)
@@ -15,6 +16,7 @@ thrown by the JVM when an array is created with a negative size.
 Exception, to give precise error messages.
 • finally Block: Used to release resources (closing the Scanner) and ensure certain code always
 executes, regardless of whether an exception occurred.
+
 3. Algorithm
 Step 1: Start the program and create a Scanner object to read input from the console.
 Step 2: Prompt the user to enter the number of guests (the size of the guest-list array).
@@ -31,6 +33,7 @@ Step 8: Display the complete guest list to the user.
 Step 9: In the finally block, close the Scanner object and print a program-completion message so
 that this always executes whether or not an exception occurred.
 Step 10: End the program.
+
 4. Java Code
 import java.util.Scanner;
 public class GuestListException {
@@ -62,7 +65,8 @@ public class GuestListException {
  System.out.println("Program execution completed.");
  }
  }
-}5. Output
+}
+5. Output
 Test Case 1: Negative size entered
 Enter number of guests: -5
 Error: Cannot create guest-list array. Array size cannot be negative.
@@ -79,6 +83,7 @@ Arjun
 Priya
 Kabir
 Program execution completed.
+
 6. Reference
  Oracle Java Documentation – NegativeArraySizeException,
 docs.oracle.com/javase/8/docs/api/java/lang/NegativeArraySizeException.html
